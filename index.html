@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>FireRhyth</title>
+  <meta name="description" content="Rhythm maker">
+  <meta name="author" content="clubfest">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <button id='save-button'>Save and Clear</button>
+  <div id='test-panel'></div>
+  <div id='tapping-panel'>Tap to create a beat.</div>
+  <script src="js/jquery-3.2.0.min.js"></script>
+  <script src="http://www.verovio.org/javascript/latest/verovio-toolkit.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase-database.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAEreqvAfQUb8XG8vp-eEXgmz0OT3dTqnI",
+        authDomain: "firerhyth.firebaseapp.com",
+        databaseURL: "https://firerhyth.firebaseio.com",
+        storageBucket: "firerhyth.appspot.com",
+        messagingSenderId: "584779516159"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>

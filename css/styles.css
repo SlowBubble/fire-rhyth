@@ -1,0 +1,26 @@
+
+html, body
+{
+    height: 100%;
+}
+body
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#save-button {
+  height: 50px;
+}
+
+#test-panel {
+  flex:1;
+  background: lightcyan;
+}
+
+#tapping-panel {
+  flex:1;
+  background: lightcyan;
+  font-family: monospace;
+  font-size: 24px;
+}
