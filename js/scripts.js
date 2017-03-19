@@ -124,14 +124,17 @@ function onTouchEnd(e, touches, recordedTouches, synchronizing){
         touch.duration = currTime - touch.start;
         var previousTouchEndTime = null;
         if (recordedTouches.length > 0) {
-          var previousTouch = recordedTouches[recordedTouches.length - 1];
-          previousTouchEndTime = previousTouch.start + previousTouch.duration;
-          var restDuration = currTime - previousTouchEndTime;
-          if (!synchronizing && restDuration > 0) {
-            record(recordedTouches, {
-              start: previousTouchEndTime, duration: restDuration, meta: 'rest'
-            });
-          }
+          var previousTouch = recordedTouches.splice(recordedTouches.length - 1, 1)[0];
+          previousTouch.duration = currTime - previousTouch.start;
+          record(recordedTouches, previousTouch);          
+          // var previousTouch = recordedTouches[recordedTouches.length - 1];
+          // previousTouchEndTime = previousTouch.start + previousTouch.duration;
+          // var restDuration = currTime - previousTouchEndTime;
+          // if (!synchronizing && restDuration > 0) {
+          //   record(recordedTouches, {
+          //     start: previousTouchEndTime, duration: restDuration, meta: 'rest'
+          //   });
+          // }
         }
         record(recordedTouches, touch);
       }

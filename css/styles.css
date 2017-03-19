@@ -14,7 +14,8 @@ body
 }
 
 #test-panel {
-  flex:1;
+  flex:0;
+  /*flex:1;*/
   background: lightcyan;
 }
 
