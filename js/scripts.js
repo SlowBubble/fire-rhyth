@@ -84,8 +84,8 @@ $saveButton.click(function() {
 });
 
 function normalize(duration, beat) {
-  var noise = 1 / 10;
-  var maxMult = 4;
+  var noise = 1 / 4;
+  var maxMult = 2;
   var beats = duration / beat;
   for (var mult = 1; mult <= maxMult; mult++) {
     var multBeats = mult * beats;
