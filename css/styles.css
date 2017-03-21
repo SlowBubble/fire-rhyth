@@ -9,19 +9,50 @@ body
     flex-direction: column;
 }
 
+#buttons-panel {
+  display: flex;
+  flex-direction: row;
+}
+
+#clear-button {
+  height: 50px;
+  flex: 1;
+}
 #save-button {
   height: 50px;
+  flex: 1;
 }
 
 #test-panel {
   flex:0;
-  /*flex:1;*/
-  background: lightcyan;
+  /*flex: 1;*/
+  display: flex;
+  flex-direction: row
 }
 
-#tapping-panel {
+#test-beat-panel {
   flex:1;
-  background: lightcyan;
+  background: lightblue;
+}
+#test-melody-panel {
+  flex:1;
+  background: lightgoldenrodyellow;
+}
+
+#tap-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+
   font-family: monospace;
   font-size: 24px;
+}
+
+#beat-panel {
+  flex:1;
+  background: lightblue;
+}
+#melody-panel {
+  flex:1;
+  background: lightgoldenrodyellow;
 }
